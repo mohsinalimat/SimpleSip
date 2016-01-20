@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197A1C4FE3FF00EC8685 /* main.m */; };
+		DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */; };
+		DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */; };
+		DCC819841C4FE3FF00EC8685 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC819831C4FE3FF00EC8685 /* ViewController.m */; };
+		DCC819871C4FE3FF00EC8685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCC819851C4FE3FF00EC8685 /* Main.storyboard */; };
+		DCC819891C4FE3FF00EC8685 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCC819881C4FE3FF00EC8685 /* Images.xcassets */; };
+		DCC8198C1C4FE3FF00EC8685 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */; };
+		DCC819981C4FE3FF00EC8685 /* BragiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC819971C4FE3FF00EC8685 /* BragiTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DCC819921C4FE3FF00EC8685 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DCC8196D1C4FE3FF00EC8685 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DCC819741C4FE3FF00EC8685;
+			remoteInfo = Bragi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC819791C4FE3FF00EC8685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC8197A1C4FE3FF00EC8685 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DCC8197C1C4FE3FF00EC8685 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DCC819801C4FE3FF00EC8685 /* Bragi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bragi.xcdatamodel; sourceTree = "<group>"; };
+		DCC819821C4FE3FF00EC8685 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DCC819831C4FE3FF00EC8685 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DCC819861C4FE3FF00EC8685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DCC819881C4FE3FF00EC8685 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DCC8198B1C4FE3FF00EC8685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DCC819911C4FE3FF00EC8685 /* BragiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BragiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCC819961C4FE3FF00EC8685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC819971C4FE3FF00EC8685 /* BragiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BragiTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DCC819721C4FE3FF00EC8685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC8198E1C4FE3FF00EC8685 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DCC8196C1C4FE3FF00EC8685 = {
+			isa = PBXGroup;
+			children = (
+				DCC819771C4FE3FF00EC8685 /* Bragi */,
+				DCC819941C4FE3FF00EC8685 /* BragiTests */,
+				DCC819761C4FE3FF00EC8685 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DCC819761C4FE3FF00EC8685 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DCC819751C4FE3FF00EC8685 /* Bragi.app */,
+				DCC819911C4FE3FF00EC8685 /* BragiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DCC819771C4FE3FF00EC8685 /* Bragi */ = {
+			isa = PBXGroup;
+			children = (
+				DCC8197C1C4FE3FF00EC8685 /* AppDelegate.h */,
+				DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */,
+				DCC819821C4FE3FF00EC8685 /* ViewController.h */,
+				DCC819831C4FE3FF00EC8685 /* ViewController.m */,
+				DCC819851C4FE3FF00EC8685 /* Main.storyboard */,
+				DCC819881C4FE3FF00EC8685 /* Images.xcassets */,
+				DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */,
+				DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */,
+				DCC819781C4FE3FF00EC8685 /* Supporting Files */,
+			);
+			path = Bragi;
+			sourceTree = "<group>";
+		};
+		DCC819781C4FE3FF00EC8685 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC819791C4FE3FF00EC8685 /* Info.plist */,
+				DCC8197A1C4FE3FF00EC8685 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DCC819941C4FE3FF00EC8685 /* BragiTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCC819971C4FE3FF00EC8685 /* BragiTests.m */,
+				DCC819951C4FE3FF00EC8685 /* Supporting Files */,
+			);
+			path = BragiTests;
+			sourceTree = "<group>";
+		};
+		DCC819951C4FE3FF00EC8685 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DCC819961C4FE3FF00EC8685 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DCC819741C4FE3FF00EC8685 /* Bragi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC8199B1C4FE3FF00EC8685 /* Build configuration list for PBXNativeTarget "Bragi" */;
+			buildPhases = (
+				DCC819711C4FE3FF00EC8685 /* Sources */,
+				DCC819721C4FE3FF00EC8685 /* Frameworks */,
+				DCC819731C4FE3FF00EC8685 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bragi;
+			productName = Bragi;
+			productReference = DCC819751C4FE3FF00EC8685 /* Bragi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DCC819901C4FE3FF00EC8685 /* BragiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCC8199E1C4FE3FF00EC8685 /* Build configuration list for PBXNativeTarget "BragiTests" */;
+			buildPhases = (
+				DCC8198D1C4FE3FF00EC8685 /* Sources */,
+				DCC8198E1C4FE3FF00EC8685 /* Frameworks */,
+				DCC8198F1C4FE3FF00EC8685 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DCC819931C4FE3FF00EC8685 /* PBXTargetDependency */,
+			);
+			name = BragiTests;
+			productName = BragiTests;
+			productReference = DCC819911C4FE3FF00EC8685 /* BragiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DCC8196D1C4FE3FF00EC8685 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Yvonne;
+				TargetAttributes = {
+					DCC819741C4FE3FF00EC8685 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					DCC819901C4FE3FF00EC8685 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = DCC819741C4FE3FF00EC8685;
+					};
+				};
+			};
+			buildConfigurationList = DCC819701C4FE3FF00EC8685 /* Build configuration list for PBXProject "Bragi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DCC8196C1C4FE3FF00EC8685;
+			productRefGroup = DCC819761C4FE3FF00EC8685 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DCC819741C4FE3FF00EC8685 /* Bragi */,
+				DCC819901C4FE3FF00EC8685 /* BragiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DCC819731C4FE3FF00EC8685 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC819871C4FE3FF00EC8685 /* Main.storyboard in Resources */,
+				DCC8198C1C4FE3FF00EC8685 /* LaunchScreen.xib in Resources */,
+				DCC819891C4FE3FF00EC8685 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC8198F1C4FE3FF00EC8685 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DCC819711C4FE3FF00EC8685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */,
+				DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */,
+				DCC819841C4FE3FF00EC8685 /* ViewController.m in Sources */,
+				DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC8198D1C4FE3FF00EC8685 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCC819981C4FE3FF00EC8685 /* BragiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DCC819931C4FE3FF00EC8685 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DCC819741C4FE3FF00EC8685 /* Bragi */;
+			targetProxy = DCC819921C4FE3FF00EC8685 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DCC819851C4FE3FF00EC8685 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC819861C4FE3FF00EC8685 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DCC8198B1C4FE3FF00EC8685 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DCC819991C4FE3FF00EC8685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DCC8199A1C4FE3FF00EC8685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DCC8199C1C4FE3FF00EC8685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bragi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DCC8199D1C4FE3FF00EC8685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Bragi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DCC8199F1C4FE3FF00EC8685 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BragiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bragi.app/Bragi";
+			};
+			name = Debug;
+		};
+		DCC819A01C4FE3FF00EC8685 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BragiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bragi.app/Bragi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DCC819701C4FE3FF00EC8685 /* Build configuration list for PBXProject "Bragi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC819991C4FE3FF00EC8685 /* Debug */,
+				DCC8199A1C4FE3FF00EC8685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCC8199B1C4FE3FF00EC8685 /* Build configuration list for PBXNativeTarget "Bragi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC8199C1C4FE3FF00EC8685 /* Debug */,
+				DCC8199D1C4FE3FF00EC8685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DCC8199E1C4FE3FF00EC8685 /* Build configuration list for PBXNativeTarget "BragiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCC8199F1C4FE3FF00EC8685 /* Debug */,
+				DCC819A01C4FE3FF00EC8685 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				DCC819801C4FE3FF00EC8685 /* Bragi.xcdatamodel */,
+			);
+			currentVersion = DCC819801C4FE3FF00EC8685 /* Bragi.xcdatamodel */;
+			path = Bragi.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = DCC8196D1C4FE3FF00EC8685 /* Project object */;
+}
