@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <pjsua-lib/pjsua.h>
 @interface AppDelegate ()
 
 @end
