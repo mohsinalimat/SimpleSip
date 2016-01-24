@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DCBD86FE1C52535300333BB5 /* DialingCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */; };
+		DCBD87001C52583900333BB5 /* mute.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD86FF1C52583900333BB5 /* mute.png */; };
+		DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87011C525DBB00333BB5 /* muteImg.png */; };
+		DCBD870A1C5260A800333BB5 /* ampImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87091C5260A800333BB5 /* ampImg.png */; };
+		DCBD870E1C52632500333BB5 /* dialpadImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD870D1C52632500333BB5 /* dialpadImg.png */; };
+		DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */; };
 		DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197A1C4FE3FF00EC8685 /* main.m */; };
 		DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */; };
 		DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */; };
@@ -40,6 +46,10 @@
 		DCC81B1A1C4FE42800EC8685 /* libvo-amrwbenc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC81AFE1C4FE42800EC8685 /* libvo-amrwbenc.a */; };
 		DCC81B1D1C4FE5CB00EC8685 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC81B1B1C4FE5CB00EC8685 /* AudioToolbox.framework */; };
 		DCC81B1E1C4FE5CB00EC8685 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC81B1C1C4FE5CB00EC8685 /* AVFoundation.framework */; };
+		DCC81C821C50B80D00EC8685 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC81C811C50B80D00EC8685 /* MainViewController.m */; };
+		DCE6B1161C51F671002CEAFC /* IncomingCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCE6B1151C51F671002CEAFC /* IncomingCallViewController.m */; };
+		DCE6B11F1C52271D002CEAFC /* answerImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCE6B11D1C52271D002CEAFC /* answerImg.png */; };
+		DCE6B1201C52271D002CEAFC /* hangupImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCE6B11E1C52271D002CEAFC /* hangupImg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DCBD86FC1C52534300333BB5 /* DialingCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialingCallViewController.h; sourceTree = "<group>"; };
+		DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialingCallViewController.m; sourceTree = "<group>"; };
+		DCBD86FF1C52583900333BB5 /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mute.png; path = Bragi/images/mute.png; sourceTree = "<group>"; };
+		DCBD87011C525DBB00333BB5 /* muteImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = muteImg.png; path = Bragi/images/muteImg.png; sourceTree = "<group>"; };
+		DCBD87091C5260A800333BB5 /* ampImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ampImg.png; path = Bragi/images/ampImg.png; sourceTree = "<group>"; };
+		DCBD870D1C52632500333BB5 /* dialpadImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dialpadImg.png; path = Bragi/images/dialpadImg.png; sourceTree = "<group>"; };
+		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestWebService.h; path = Bragi/RestWebService.h; sourceTree = "<group>"; };
+		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestWebService.m; path = Bragi/RestWebService.m; sourceTree = "<group>"; };
 		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC819791C4FE3FF00EC8685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC8197A1C4FE3FF00EC8685 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -92,6 +110,12 @@
 		DCC81AFE1C4FE42800EC8685 /* libvo-amrwbenc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libvo-amrwbenc.a"; sourceTree = "<group>"; };
 		DCC81B1B1C4FE5CB00EC8685 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		DCC81B1C1C4FE5CB00EC8685 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DCC81C801C50B7F700EC8685 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		DCC81C811C50B80D00EC8685 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = ../MainViewController.m; sourceTree = "<group>"; };
+		DCE6B1121C51F5A4002CEAFC /* IncomingCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IncomingCallViewController.h; sourceTree = "<group>"; };
+		DCE6B1151C51F671002CEAFC /* IncomingCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncomingCallViewController.m; sourceTree = "<group>"; };
+		DCE6B11D1C52271D002CEAFC /* answerImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = answerImg.png; path = Bragi/images/answerImg.png; sourceTree = "<group>"; };
+		DCE6B11E1C52271D002CEAFC /* hangupImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hangupImg.png; path = Bragi/images/hangupImg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +164,14 @@
 		DCC8196C1C4FE3FF00EC8685 = {
 			isa = PBXGroup;
 			children = (
+				DCE6B11D1C52271D002CEAFC /* answerImg.png */,
+				DCE6B11E1C52271D002CEAFC /* hangupImg.png */,
+				DCBD86FF1C52583900333BB5 /* mute.png */,
+				DCBD87011C525DBB00333BB5 /* muteImg.png */,
+				DCBD870D1C52632500333BB5 /* dialpadImg.png */,
+				DCBD87091C5260A800333BB5 /* ampImg.png */,
+				DCC0CD991C514B6A00A7D00E /* RestWebService.h */,
+				DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */,
 				DCC819771C4FE3FF00EC8685 /* Bragi */,
 				DCC819A11C4FE42700EC8685 /* PJSIP */,
 				DCC819941C4FE3FF00EC8685 /* BragiTests */,
@@ -164,6 +196,12 @@
 				DCC819821C4FE3FF00EC8685 /* ViewController.h */,
 				DCC819831C4FE3FF00EC8685 /* ViewController.m */,
 				DCC819851C4FE3FF00EC8685 /* Main.storyboard */,
+				DCC81C801C50B7F700EC8685 /* MainViewController.h */,
+				DCC81C811C50B80D00EC8685 /* MainViewController.m */,
+				DCE6B1121C51F5A4002CEAFC /* IncomingCallViewController.h */,
+				DCE6B1151C51F671002CEAFC /* IncomingCallViewController.m */,
+				DCBD86FC1C52534300333BB5 /* DialingCallViewController.h */,
+				DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */,
 				DCC819881C4FE3FF00EC8685 /* Images.xcassets */,
 				DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */,
 				DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */,
@@ -336,6 +374,7 @@
 				TargetAttributes = {
 					DCC819741C4FE3FF00EC8685 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Y73V382M7G;
 					};
 					DCC819901C4FE3FF00EC8685 = {
 						CreatedOnToolsVersion = 6.4;
@@ -368,6 +407,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC819871C4FE3FF00EC8685 /* Main.storyboard in Resources */,
+				DCBD870E1C52632500333BB5 /* dialpadImg.png in Resources */,
+				DCE6B1201C52271D002CEAFC /* hangupImg.png in Resources */,
+				DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */,
+				DCBD87001C52583900333BB5 /* mute.png in Resources */,
+				DCBD870A1C5260A800333BB5 /* ampImg.png in Resources */,
+				DCE6B11F1C52271D002CEAFC /* answerImg.png in Resources */,
 				DCC8198C1C4FE3FF00EC8685 /* LaunchScreen.xib in Resources */,
 				DCC819891C4FE3FF00EC8685 /* Images.xcassets in Resources */,
 			);
@@ -387,9 +432,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */,
+				DCBD86FE1C52535300333BB5 /* DialingCallViewController.m in Sources */,
 				DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */,
 				DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */,
+				DCE6B1161C51F671002CEAFC /* IncomingCallViewController.m in Sources */,
 				DCC819841C4FE3FF00EC8685 /* ViewController.m in Sources */,
+				DCC81C821C50B80D00EC8685 /* MainViewController.m in Sources */,
 				DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +500,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -507,6 +557,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -516,6 +567,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					PJ_AUTOCONF,
@@ -542,8 +596,12 @@
 					"$(PROJECT_DIR)/Bragi/PJSIP/libs/third_party",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -551,6 +609,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEAD_CODE_STRIPPING = YES;
 				GCC_PREPROCESSOR_DEFINITIONS = PJ_AUTOCONF;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -573,9 +634,13 @@
 					"$(PROJECT_DIR)/Bragi/PJSIP/libs/pjsip",
 					"$(PROJECT_DIR)/Bragi/PJSIP/libs/third_party",
 				);
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "-ObjC";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"$(inherited)",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -593,6 +658,13 @@
 				);
 				INFOPLIST_FILE = BragiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+					"-Obj-c",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bragi.app/Bragi";
 			};
@@ -608,6 +680,12 @@
 				);
 				INFOPLIST_FILE = BragiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					XCTest,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bragi.app/Bragi";
 			};
@@ -632,6 +710,7 @@
 				DCC8199D1C4FE3FF00EC8685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DCC8199E1C4FE3FF00EC8685 /* Build configuration list for PBXNativeTarget "BragiTests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +719,7 @@
 				DCC819A01C4FE3FF00EC8685 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
