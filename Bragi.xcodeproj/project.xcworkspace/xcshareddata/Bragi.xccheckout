@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>AB95C70A-9A51-498E-9B21-C970EACC7234</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Bragi</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9FB4732E77979EF1ADEDFD32B35B87E086EED85F</key>
 		<string>https://github.com/Tailcloud/SimpleSip.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Bragi.xcodeproj/project.xcworkspace</string>
+	<string>Bragi.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>9FB4732E77979EF1ADEDFD32B35B87E086EED85F</key>

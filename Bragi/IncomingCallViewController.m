@@ -26,12 +26,12 @@
     
     answerbut = [UIButton buttonWithType:UIButtonTypeCustom];
     answerbut.backgroundColor = [UIColor clearColor];
-//    [answerbut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-//    [answerbut setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    //    [answerbut setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //    [answerbut setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
     
     UIImage *answerImg = [UIImage imageNamed:@"answerImg.png"];
     [answerbut setImage:answerImg forState:UIControlStateNormal];
-
+    
     [answerbut addTarget:self action:@selector(answerButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
     answerbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-150, [UIScreen mainScreen].bounds.size.height-300, 128, 128);
     
@@ -45,13 +45,13 @@
     hangupbut.frame = CGRectMake(50,[UIScreen mainScreen].bounds.size.height-300,128,128);
     [self.view addSubview:hangupbut];
     [self.view addSubview:answerbut];
-   // self.phoneNumberLabel.text = self.phoneNumber;
+    // self.phoneNumberLabel.text = self.phoneNumber;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleCallStatusChanged:)
                                                  name:@"SIPCallStatusChangedNotification"
                                                object:nil];
-
+    
 }
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
@@ -86,7 +86,7 @@
 //                error: &setCategoryError];
 //if (!success) {
 //    UIAlertView *alert = [[UIAlertViewalloc]initWithTitle:@"～"message:@"器"delegate:nilcancelButtonTitle:@"OK!"otherButtonTitles:nil];
-//    
+//
 //}
 //[selfdisplayIncomingCall:call];
 //

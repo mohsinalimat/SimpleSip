@@ -36,7 +36,7 @@ MainViewController *mainviewcontroller;
     UIImage *muteImg = [UIImage imageNamed:@"muteImg.png"];
     [mutebut setImage:muteImg forState:UIControlStateNormal];
     mutebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width*0.1, [UIScreen mainScreen].bounds.size.height/2-100, 64, 64);
-
+    
     //dialpadbutton
     dialpadbut = [UIButton buttonWithType:UIButtonTypeCustom];
     dialpadbut.backgroundColor = [UIColor clearColor];
@@ -57,16 +57,36 @@ MainViewController *mainviewcontroller;
     [hangupbut setImage:hangupImg forState:UIControlStateNormal];
     hangupbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-64, [UIScreen mainScreen].bounds.size.height-200, 128, 128);
     [hangupbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
-
-
-
+    
+    
+    
     [self.view addSubview:mutebut];
     [self.view addSubview:dialpadbut];
     [self.view addSubview:amplbut];
     [self.view addSubview:hangupbut];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleCallStatusChanged:)
+                                                 name:@"SIPCallStatusChangedNotification"
+                                               object:nil];
     
 }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)handleCallStatusChanged:(NSNotification *)notification {
+    pjsua_call_id call_id = [notification.userInfo[@"call_id"] intValue];
+    pjsip_inv_state state = [notification.userInfo[@"state"] intValue];
+    
+    if(call_id != _call_id) return;
+    if (state == PJSIP_INV_STATE_DISCONNECTED) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    
+}
+
 
 - (void)hangupButtonTouched:(id)sender {
     pj_status_t status = pjsua_call_hangup(_call_id, 0, NULL, NULL);
@@ -75,12 +95,6 @@ MainViewController *mainviewcontroller;
         const pj_str_t *statusText =  pjsip_get_status_text(status);
         NSLog(@"Error in hanging up :%d(%s) !", status, statusText->ptr);
     }
-    mainviewcontroller = [[MainViewController alloc]init];
-
-    UIViewController *rootViewController = self;
-    [rootViewController presentViewController:mainviewcontroller animated:YES completion:nil];
-    
-//    pjsua_call_hangup((pjsua_call_id)self.callId, 0, NULL, NULL);
 }
 
 - (void)didReceiveMemoryWarning {
