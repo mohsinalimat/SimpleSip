@@ -10,7 +10,7 @@
 #import "DialingCallViewController.h"
 #import <pjsua-lib/pjsua.h>
 #import "MainViewController.h"
-//#import "DialPad.h"
+#import "DialPad.h"
 @interface DialingCallViewController(){
 }
 
@@ -44,7 +44,7 @@ MainViewController *mainviewcontroller;
     UIImage *dialpadImg = [UIImage imageNamed:@"dialpadImg.png"];
     [dialpadbut setImage:dialpadImg forState:UIControlStateNormal];
     dialpadbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-32, [UIScreen mainScreen].bounds.size.height/2-100, 64, 64);
-  //  [dialpadbut addTarget:self action:@selector(dialpad:) forControlEvents:UIControlEventTouchUpInside];
+    [dialpadbut addTarget:self action:@selector(dialpad:) forControlEvents:UIControlEventTouchUpInside];
 
     //amplbutton
     amplbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -76,9 +76,10 @@ MainViewController *mainviewcontroller;
 }
 
 - (void)dialpad:(id)sender{
-//    DialPad *pad = [[DialPad alloc]init];
-//    UIViewController *rootViewController = self;
-//    [rootViewController presentViewController:pad animated:YES completion:nil];
+    DialPad *pad = [[DialPad alloc]init];
+    UIViewController *rootViewController = self;
+    pad.callId = self.callId;
+    [rootViewController presentViewController:pad animated:YES completion:nil];
 
 }
 - (void)dealloc {

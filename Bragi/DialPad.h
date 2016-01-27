@@ -17,6 +17,7 @@
 @interface DialPad : UIViewController<UITextFieldDelegate>
 @property (strong,nonatomic) UITextField  *phonenumber;
 @property (strong,nonatomic) UIButton *callbut;
+@property (nonatomic, assign) NSInteger callId;
 
 
 @end
