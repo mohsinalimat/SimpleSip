@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC9920721C58BF3D00BEBA90 /* backTo.png in Resources */ = {isa = PBXBuildFile; fileRef = DC9920711C58BF3D00BEBA90 /* backTo.png */; };
 		DCBD86FE1C52535300333BB5 /* DialingCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */; };
 		DCBD87001C52583900333BB5 /* mute.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD86FF1C52583900333BB5 /* mute.png */; };
 		DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87011C525DBB00333BB5 /* muteImg.png */; };
@@ -79,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC9920711C58BF3D00BEBA90 /* backTo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backTo.png; path = Bragi/images/backTo.png; sourceTree = "<group>"; };
 		DCBD86FC1C52534300333BB5 /* DialingCallViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialingCallViewController.h; sourceTree = "<group>"; };
 		DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialingCallViewController.m; sourceTree = "<group>"; };
 		DCBD86FF1C52583900333BB5 /* mute.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = mute.png; path = Bragi/images/mute.png; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				DCBD87B91C57A89E00333BB5 /* 7.png */,
 				DCBD87BA1C57A89E00333BB5 /* 8.png */,
 				DCBD87BB1C57A89E00333BB5 /* 9.png */,
+				DC9920711C58BF3D00BEBA90 /* backTo.png */,
 				DCE6B11D1C52271D002CEAFC /* answerImg.png */,
 				DCE6B11E1C52271D002CEAFC /* hangupImg.png */,
 				DCBD86FF1C52583900333BB5 /* mute.png */,
@@ -477,6 +480,7 @@
 				DCE6B11F1C52271D002CEAFC /* answerImg.png in Resources */,
 				DCBD87BC1C57A89E00333BB5 /* #.png in Resources */,
 				DCBD87C51C57A89E00333BB5 /* 9.png in Resources */,
+				DC9920721C58BF3D00BEBA90 /* backTo.png in Resources */,
 				DCBD87C71C57ACA100333BB5 /* 0.png in Resources */,
 				DCC8198C1C4FE3FF00EC8685 /* LaunchScreen.xib in Resources */,
 				DCBD87C21C57A89E00333BB5 /* 6.png in Resources */,

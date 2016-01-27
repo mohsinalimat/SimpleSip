@@ -30,8 +30,8 @@
 @property (strong,nonatomic) UIButton *zerobut;
 @property (strong,nonatomic) UIButton *jinbut;
 @property (strong,nonatomic) UIButton *backbut;
-
-@property (strong,nonatomic) UILabel *numberlabel;
+@property (strong,nonatomic) UIButton *digestbut;
+@property (strong,nonatomic) UITextField *numberField;
 
 
 //@property (nonatomic, copy) NSString *phoneNumber;

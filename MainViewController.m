@@ -36,7 +36,8 @@
 @synthesize zerobut;
 @synthesize jinbut;
 @synthesize backbut;
-@synthesize numberlabel;
+@synthesize digestbut;
+@synthesize numberField;
 
 @synthesize phoneNumber = _phoneNumber;
 @synthesize numberFormatter = _numberFormatter;
@@ -48,7 +49,7 @@ DialingCallViewController *dialingcallviewcontroller;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    numberlabel.text = @"0988813668";
+    numberField.text = @"";
     self.phoneNumber = @"";
     self.numberFormatter = [[PhoneNumberFormatter alloc] init];
 
@@ -90,13 +91,13 @@ DialingCallViewController *dialingcallviewcontroller;
     [callbut addTarget:self action:@selector(__processMakeCall) forControlEvents:UIControlEventTouchUpInside];
     callbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width-100, [UIScreen mainScreen].bounds.size.height-300, 100, 30);
 
-    [self.view addSubview:phonenumber];
-    [self.view addSubview:callbut];
+ //   [self.view addSubview:phonenumber];
+ //   [self.view addSubview:callbut];
     
     
     //        self.editableText = [[UITextField alloc]initWithFrame:CGRectMake(50,0,self.frame.size.width-50,self.frame.size.height)];
     
- //   [self initMainView];
+    [self initMainView];
 }
 - (void)initMainView{
     
@@ -106,7 +107,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *oneImg = [UIImage imageNamed:@"1.png"];
     [onebut setImage:oneImg forState:UIControlStateNormal];
     
-  //  [onebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    onebut.titleLabel.text = @"1";
+    [onebut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     onebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6,80,80);
     
     twobut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -115,7 +117,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *twoImg = [UIImage imageNamed:@"2.png"];
     [twobut setImage:twoImg forState:UIControlStateNormal];
     
-//    [twobut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    twobut.titleLabel.text = @"2";
+    [twobut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     twobut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6,80,80);
     
     threebut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -123,8 +126,8 @@ DialingCallViewController *dialingcallviewcontroller;
     
     UIImage *threeImg = [UIImage imageNamed:@"3.png"];
     [threebut setImage:threeImg forState:UIControlStateNormal];
-    
-  //  [threebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    threebut.titleLabel.text = @"3";
+   [threebut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     threebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6,80,80);
     
     fourbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -133,7 +136,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *fourImg = [UIImage imageNamed:@"4.png"];
     [fourbut setImage:fourImg forState:UIControlStateNormal];
     
-  //  [fourbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    fourbut.titleLabel.text = @"4";
+    [fourbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     fourbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
     
     fivebut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -142,7 +146,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *fiveImg = [UIImage imageNamed:@"5.png"];
     [fivebut setImage:fiveImg forState:UIControlStateNormal];
     
- //   [fivebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    fivebut.titleLabel.text = @"5";
+    [fivebut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     fivebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
     
     sixbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -151,7 +156,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *sixImg = [UIImage imageNamed:@"6.png"];
     [sixbut setImage:sixImg forState:UIControlStateNormal];
     
-  //  [sixbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    sixbut.titleLabel.text = @"6";
+    [sixbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     sixbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
     
     sevenbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -160,8 +166,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *sevenImg = [UIImage imageNamed:@"7.png"];
     [sevenbut setImage:sevenImg forState:UIControlStateNormal];
     
-  //  [sevenbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
-    sevenbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
+    sevenbut.titleLabel.text = @"7";
+    [sevenbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];    sevenbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
     
     eightbut = [UIButton buttonWithType:UIButtonTypeCustom];
     eightbut.backgroundColor = [UIColor clearColor];
@@ -169,7 +175,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *eightImg = [UIImage imageNamed:@"8.png"];
     [eightbut setImage:eightImg forState:UIControlStateNormal];
     
-   // [onebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    eightbut.titleLabel.text = @"8";
+    [eightbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     eightbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
     
     ninebut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -177,8 +184,8 @@ DialingCallViewController *dialingcallviewcontroller;
     
     UIImage *nineImg = [UIImage imageNamed:@"9.png"];
     [ninebut setImage:nineImg forState:UIControlStateNormal];
-    
- //   [ninebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    ninebut.titleLabel.text = @"9";
+    [ninebut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     ninebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
     
     zerobut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -187,7 +194,8 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *zeroImg = [UIImage imageNamed:@"0.png"];
     [zerobut setImage:zeroImg forState:UIControlStateNormal];
     
-   // [zerobut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    zerobut.titleLabel.text = @"0";
+    [zerobut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     zerobut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*4,80,80);
     
     jinbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -196,8 +204,19 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *jinImg = [UIImage imageNamed:@"#.png"];
     [jinbut setImage:jinImg forState:UIControlStateNormal];
     
-   // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    jinbut.titleLabel.text = @"#";
+    [jinbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
     jinbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*4,80,80);
+    
+    digestbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    digestbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *digestImg = [UIImage imageNamed:@"digest.png"];
+    [digestbut setImage:digestImg forState:UIControlStateNormal];
+    
+    digestbut.titleLabel.text = @"*";
+    [digestbut addTarget:self action:@selector(InputNum:) forControlEvents:UIControlEventTouchUpInside];
+    digestbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*4,80,80);
     
     callbut = [UIButton buttonWithType:UIButtonTypeCustom];
     callbut.backgroundColor = [UIColor clearColor];
@@ -205,7 +224,7 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *callImg = [UIImage imageNamed:@"answerImg.png"];
     [callbut setImage:callImg forState:UIControlStateNormal];
     
-    // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+     [callbut addTarget:self action:@selector(__processMakeCall) forControlEvents:UIControlEventTouchUpInside];
     callbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*5,80,80);
     
     
@@ -215,17 +234,17 @@ DialingCallViewController *dialingcallviewcontroller;
     UIImage *backImg = [UIImage imageNamed:@"back.png"];
     [backbut setImage:backImg forState:UIControlStateNormal];
     
-    // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
-    backbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*35,[UIScreen mainScreen].bounds.size.height/10,16,16);
+    [backbut addTarget:self action:@selector(goBack:) forControlEvents:UIControlEventTouchUpInside];
+    backbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*35,[UIScreen mainScreen].bounds.size.height/10,24,24);
     
-    numberlabel = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/10,[UIScreen mainScreen].bounds.size.height/12, [UIScreen mainScreen].bounds.size.width/1.5, 30)];
-    [numberlabel setTextAlignment:NSTextAlignmentCenter];
-    [numberlabel setTextColor:(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) ? [UIColor blackColor] : [UIColor whiteColor]];
-    [numberlabel setFont:[UIFont boldSystemFontOfSize:30]];
-    [numberlabel setBackgroundColor:[UIColor clearColor]];
-    numberlabel.lineBreakMode = UILineBreakModeCharacterWrap;
-    self.phoneNumber = [self.phoneNumber stringByAppendingString:@"0988813668"];
-    numberlabel.text = [self.numberFormatter format:self.phoneNumber withLocale:@"US"];
+    numberField = [[UITextField alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/10,[UIScreen mainScreen].bounds.size.height/12, [UIScreen mainScreen].bounds.size.width/1.5, 30)];
+    [numberField setTextAlignment:NSTextAlignmentCenter];
+    [numberField setTextColor:(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) ? [UIColor blackColor] : [UIColor whiteColor]];
+    [numberField setFont:[UIFont boldSystemFontOfSize:30]];
+    [numberField setBackgroundColor:[UIColor clearColor]];
+//    numberField.lineBreakMode = UILineBreakModeCharacterWrap;
+ //   self.phoneNumber = [self.phoneNumber stringByAppendingString:@"0988813668"];
+    numberField.text = [self.numberFormatter format:self.phoneNumber withLocale:@"US"];
 //    numberlabel.text = [self.numberFormatter format:self.phoneNumber withLocale:@"US"];
     [self.view addSubview:onebut];
     [self.view addSubview:twobut];
@@ -240,10 +259,33 @@ DialingCallViewController *dialingcallviewcontroller;
     [self.view addSubview:jinbut];
     [self.view addSubview:callbut];
     [self.view addSubview:backbut];
-    [self.view addSubview:numberlabel];
+    [self.view addSubview:digestbut];
+    [self.view addSubview:numberField];
 
 }
 
+- (void)InputNum:(id)sender{
+    NSLog(@"inputNum...");
+    UIButton *clicked = (UIButton *) sender;
+  //  numberField.text = @"2";
+    
+ //   [[tonesArray objectAtIndex:sender.tag] play];
+    numberField.text = [numberField.text stringByAppendingString:clicked.titleLabel.text];
+  //  numberField.text = [self.numberFormatter format:numberField.text withLocale:@"US"];
+
+    //numberField.text = [[NSString stringWithFormat:@"%ld", (long)((UIControl*)sender).tag];
+}
+
+- (void)goBack:(id)sender
+{
+    NSUInteger currentLength = [numberField.text length];
+    if (currentLength > 0)
+    {
+        NSRange range = NSMakeRange(0, currentLength - 1);
+        numberField.text = [numberField.text substringWithRange:range];
+      //  numberField.text = [self.numberFormatter format:numberField.text withLocale:@"US"];
+    }
+}
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
@@ -304,7 +346,9 @@ DialingCallViewController *dialingcallviewcontroller;
     
     pjsua_acc_id acct_id = (pjsua_acc_id)[[NSUserDefaults standardUserDefaults] integerForKey:@"login_account_id"];
 //    NSString *server = [[NSUserDefaults standardUserDefaults] stringForKey:@"server_uri"];
-    NSString *targetUri = [NSString stringWithFormat:@"sip:%@@140.114.71.165:12373", phonenumber.text];
+ //   NSString *targetUri = [NSString stringWithFormat:@"sip:%@@140.114.71.165:12373", phonenumber.text];
+    NSString *targetUri = [NSString stringWithFormat:@"sip:%@@140.114.71.165:12373", numberField.text];
+    NSLog(@"numberfield:%@",numberField.text);
     //    //  NSURL *phoneNumber = [NSURL urlWithString:[NSString stringWithFormat:@"tel://%@", username]];
     //
     //    // Whilst this version will return you to your app once the phone call is over.
