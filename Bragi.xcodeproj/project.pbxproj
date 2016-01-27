@@ -12,6 +12,22 @@
 		DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87011C525DBB00333BB5 /* muteImg.png */; };
 		DCBD870A1C5260A800333BB5 /* ampImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87091C5260A800333BB5 /* ampImg.png */; };
 		DCBD870E1C52632500333BB5 /* dialpadImg.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD870D1C52632500333BB5 /* dialpadImg.png */; };
+		DCBD87BC1C57A89E00333BB5 /* #.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B21C57A89E00333BB5 /* #.png */; };
+		DCBD87BD1C57A89E00333BB5 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B31C57A89E00333BB5 /* 1.png */; };
+		DCBD87BE1C57A89E00333BB5 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B41C57A89E00333BB5 /* 2.png */; };
+		DCBD87BF1C57A89E00333BB5 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B51C57A89E00333BB5 /* 3.png */; };
+		DCBD87C01C57A89E00333BB5 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B61C57A89E00333BB5 /* 4.png */; };
+		DCBD87C11C57A89E00333BB5 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B71C57A89E00333BB5 /* 5.png */; };
+		DCBD87C21C57A89E00333BB5 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B81C57A89E00333BB5 /* 6.png */; };
+		DCBD87C31C57A89E00333BB5 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87B91C57A89E00333BB5 /* 7.png */; };
+		DCBD87C41C57A89E00333BB5 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87BA1C57A89E00333BB5 /* 8.png */; };
+		DCBD87C51C57A89E00333BB5 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87BB1C57A89E00333BB5 /* 9.png */; };
+		DCBD87C71C57ACA100333BB5 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87C61C57ACA100333BB5 /* 0.png */; };
+		DCBD87C91C57B22F00333BB5 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87C81C57B22F00333BB5 /* back.png */; };
+		DCBD87CB1C57B4CC00333BB5 /* digest.png in Resources */ = {isa = PBXBuildFile; fileRef = DCBD87CA1C57B4CC00333BB5 /* digest.png */; };
+		DCBD87CE1C57B61A00333BB5 /* PhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87CD1C57B61A00333BB5 /* PhoneNumberFormatter.m */; };
+		DCBD87D11C57C17E00333BB5 /* DialPad.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87D01C57C17E00333BB5 /* DialPad.m */; };
+		DCBD87D41C57CFCC00333BB5 /* GSPJUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */; };
 		DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */; };
 		DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197A1C4FE3FF00EC8685 /* main.m */; };
 		DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */; };
@@ -69,6 +85,25 @@
 		DCBD87011C525DBB00333BB5 /* muteImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = muteImg.png; path = Bragi/images/muteImg.png; sourceTree = "<group>"; };
 		DCBD87091C5260A800333BB5 /* ampImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ampImg.png; path = Bragi/images/ampImg.png; sourceTree = "<group>"; };
 		DCBD870D1C52632500333BB5 /* dialpadImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dialpadImg.png; path = Bragi/images/dialpadImg.png; sourceTree = "<group>"; };
+		DCBD87B21C57A89E00333BB5 /* #.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "#.png"; path = "Bragi/images/#.png"; sourceTree = "<group>"; };
+		DCBD87B31C57A89E00333BB5 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Bragi/images/1.png; sourceTree = "<group>"; };
+		DCBD87B41C57A89E00333BB5 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Bragi/images/2.png; sourceTree = "<group>"; };
+		DCBD87B51C57A89E00333BB5 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = Bragi/images/3.png; sourceTree = "<group>"; };
+		DCBD87B61C57A89E00333BB5 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = Bragi/images/4.png; sourceTree = "<group>"; };
+		DCBD87B71C57A89E00333BB5 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 5.png; path = Bragi/images/5.png; sourceTree = "<group>"; };
+		DCBD87B81C57A89E00333BB5 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 6.png; path = Bragi/images/6.png; sourceTree = "<group>"; };
+		DCBD87B91C57A89E00333BB5 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 7.png; path = Bragi/images/7.png; sourceTree = "<group>"; };
+		DCBD87BA1C57A89E00333BB5 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 8.png; path = Bragi/images/8.png; sourceTree = "<group>"; };
+		DCBD87BB1C57A89E00333BB5 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 9.png; path = Bragi/images/9.png; sourceTree = "<group>"; };
+		DCBD87C61C57ACA100333BB5 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 0.png; path = Bragi/images/0.png; sourceTree = "<group>"; };
+		DCBD87C81C57B22F00333BB5 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = Bragi/images/back.png; sourceTree = "<group>"; };
+		DCBD87CA1C57B4CC00333BB5 /* digest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = digest.png; path = Bragi/images/digest.png; sourceTree = "<group>"; };
+		DCBD87CC1C57B61900333BB5 /* PhoneNumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberFormatter.h; sourceTree = "<group>"; };
+		DCBD87CD1C57B61A00333BB5 /* PhoneNumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberFormatter.m; sourceTree = "<group>"; };
+		DCBD87CF1C57C16D00333BB5 /* DialPad.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DialPad.h; sourceTree = "<group>"; };
+		DCBD87D01C57C17E00333BB5 /* DialPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialPad.m; sourceTree = "<group>"; };
+		DCBD87D21C57CFCC00333BB5 /* GSPJUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPJUtil.h; sourceTree = "<group>"; };
+		DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPJUtil.m; sourceTree = "<group>"; };
 		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestWebService.h; path = Bragi/RestWebService.h; sourceTree = "<group>"; };
 		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestWebService.m; path = Bragi/RestWebService.m; sourceTree = "<group>"; };
 		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -164,6 +199,19 @@
 		DCC8196C1C4FE3FF00EC8685 = {
 			isa = PBXGroup;
 			children = (
+				DCBD87C81C57B22F00333BB5 /* back.png */,
+				DCBD87CA1C57B4CC00333BB5 /* digest.png */,
+				DCBD87B21C57A89E00333BB5 /* #.png */,
+				DCBD87C61C57ACA100333BB5 /* 0.png */,
+				DCBD87B31C57A89E00333BB5 /* 1.png */,
+				DCBD87B41C57A89E00333BB5 /* 2.png */,
+				DCBD87B51C57A89E00333BB5 /* 3.png */,
+				DCBD87B61C57A89E00333BB5 /* 4.png */,
+				DCBD87B71C57A89E00333BB5 /* 5.png */,
+				DCBD87B81C57A89E00333BB5 /* 6.png */,
+				DCBD87B91C57A89E00333BB5 /* 7.png */,
+				DCBD87BA1C57A89E00333BB5 /* 8.png */,
+				DCBD87BB1C57A89E00333BB5 /* 9.png */,
 				DCE6B11D1C52271D002CEAFC /* answerImg.png */,
 				DCE6B11E1C52271D002CEAFC /* hangupImg.png */,
 				DCBD86FF1C52583900333BB5 /* mute.png */,
@@ -191,7 +239,11 @@
 		DCC819771C4FE3FF00EC8685 /* Bragi */ = {
 			isa = PBXGroup;
 			children = (
+				DCBD87D21C57CFCC00333BB5 /* GSPJUtil.h */,
+				DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */,
 				DCC8197C1C4FE3FF00EC8685 /* AppDelegate.h */,
+				DCBD87CC1C57B61900333BB5 /* PhoneNumberFormatter.h */,
+				DCBD87CD1C57B61A00333BB5 /* PhoneNumberFormatter.m */,
 				DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */,
 				DCC819821C4FE3FF00EC8685 /* ViewController.h */,
 				DCC819831C4FE3FF00EC8685 /* ViewController.m */,
@@ -202,6 +254,8 @@
 				DCE6B1151C51F671002CEAFC /* IncomingCallViewController.m */,
 				DCBD86FC1C52534300333BB5 /* DialingCallViewController.h */,
 				DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */,
+				DCBD87CF1C57C16D00333BB5 /* DialPad.h */,
+				DCBD87D01C57C17E00333BB5 /* DialPad.m */,
 				DCC819881C4FE3FF00EC8685 /* Images.xcassets */,
 				DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */,
 				DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */,
@@ -406,15 +460,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBD87BD1C57A89E00333BB5 /* 1.png in Resources */,
 				DCC819871C4FE3FF00EC8685 /* Main.storyboard in Resources */,
 				DCBD870E1C52632500333BB5 /* dialpadImg.png in Resources */,
 				DCE6B1201C52271D002CEAFC /* hangupImg.png in Resources */,
 				DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */,
 				DCBD87001C52583900333BB5 /* mute.png in Resources */,
+				DCBD87C41C57A89E00333BB5 /* 8.png in Resources */,
+				DCBD87C11C57A89E00333BB5 /* 5.png in Resources */,
+				DCBD87C31C57A89E00333BB5 /* 7.png in Resources */,
+				DCBD87BE1C57A89E00333BB5 /* 2.png in Resources */,
 				DCBD870A1C5260A800333BB5 /* ampImg.png in Resources */,
+				DCBD87C91C57B22F00333BB5 /* back.png in Resources */,
+				DCBD87C01C57A89E00333BB5 /* 4.png in Resources */,
+				DCBD87BF1C57A89E00333BB5 /* 3.png in Resources */,
 				DCE6B11F1C52271D002CEAFC /* answerImg.png in Resources */,
+				DCBD87BC1C57A89E00333BB5 /* #.png in Resources */,
+				DCBD87C51C57A89E00333BB5 /* 9.png in Resources */,
+				DCBD87C71C57ACA100333BB5 /* 0.png in Resources */,
 				DCC8198C1C4FE3FF00EC8685 /* LaunchScreen.xib in Resources */,
+				DCBD87C21C57A89E00333BB5 /* 6.png in Resources */,
 				DCC819891C4FE3FF00EC8685 /* Images.xcassets in Resources */,
+				DCBD87CB1C57B4CC00333BB5 /* digest.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +500,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */,
+				DCBD87CE1C57B61A00333BB5 /* PhoneNumberFormatter.m in Sources */,
 				DCBD86FE1C52535300333BB5 /* DialingCallViewController.m in Sources */,
+				DCBD87D11C57C17E00333BB5 /* DialPad.m in Sources */,
 				DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */,
 				DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */,
 				DCE6B1161C51F671002CEAFC /* IncomingCallViewController.m in Sources */,
+				DCBD87D41C57CFCC00333BB5 /* GSPJUtil.m in Sources */,
 				DCC819841C4FE3FF00EC8685 /* ViewController.m in Sources */,
 				DCC81C821C50B80D00EC8685 /* MainViewController.m in Sources */,
 				DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */,

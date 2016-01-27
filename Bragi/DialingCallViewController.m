@@ -10,6 +10,7 @@
 #import "DialingCallViewController.h"
 #import <pjsua-lib/pjsua.h>
 #import "MainViewController.h"
+//#import "DialPad.h"
 @interface DialingCallViewController(){
     pjsua_call_id _call_id;
 }
@@ -28,6 +29,7 @@
 MainViewController *mainviewcontroller;
 -(void)viewDidLoad {
     [super viewDidLoad];
+    
     self.view = [[UIView alloc]init];
     self.view.backgroundColor = [UIColor blackColor];
     //mutebutton
@@ -43,6 +45,8 @@ MainViewController *mainviewcontroller;
     UIImage *dialpadImg = [UIImage imageNamed:@"dialpadImg.png"];
     [dialpadbut setImage:dialpadImg forState:UIControlStateNormal];
     dialpadbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2-32, [UIScreen mainScreen].bounds.size.height/2-100, 64, 64);
+  //  [dialpadbut addTarget:self action:@selector(dialpad:) forControlEvents:UIControlEventTouchUpInside];
+
     //amplbutton
     amplbut = [UIButton buttonWithType:UIButtonTypeCustom];
     amplbut.backgroundColor = [UIColor clearColor];
@@ -72,6 +76,12 @@ MainViewController *mainviewcontroller;
     
 }
 
+- (void)dialpad:(id)sender{
+//    DialPad *pad = [[DialPad alloc]init];
+//    UIViewController *rootViewController = self;
+//    [rootViewController presentViewController:pad animated:YES completion:nil];
+
+}
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -83,6 +93,10 @@ MainViewController *mainviewcontroller;
     if(call_id != _call_id) return;
     if (state == PJSIP_INV_STATE_DISCONNECTED) {
         [self dismissViewControllerAnimated:YES completion:nil];
+    }else if(state == PJSIP_INV_STATE_CONNECTING){
+        NSLog(@"连接中...");
+    } else if(state == PJSIP_INV_STATE_CONFIRMED) {
+        NSLog(@"接听成功！");
     }
     
 }

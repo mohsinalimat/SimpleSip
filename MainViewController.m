@@ -10,7 +10,12 @@
 #import "MainViewController.h"
 #import <pjsua-lib/pjsua.h>
 #import "DialingCallViewController.h"
-@interface MainViewController ()
+#import "PhoneNumberFormatter.h"
+@interface MainViewController (){
+    pjsua_call_id _call_id;
+}
+@property (nonatomic, retain) NSString *phoneNumber;
+@property (nonatomic, retain) PhoneNumberFormatter *numberFormatter;
 
 @end
 
@@ -19,14 +24,34 @@
 @synthesize callbut;
 //@synthesize phoneNumber;
 //@synthesize callId;
+@synthesize onebut;
+@synthesize twobut;
+@synthesize threebut;
+@synthesize fourbut;
+@synthesize fivebut;
+@synthesize sixbut;
+@synthesize sevenbut;
+@synthesize eightbut;
+@synthesize ninebut;
+@synthesize zerobut;
+@synthesize jinbut;
+@synthesize backbut;
+@synthesize numberlabel;
 
-pjsua_call_id _call_id;
+@synthesize phoneNumber = _phoneNumber;
+@synthesize numberFormatter = _numberFormatter;
+
+
+//pjsua_call_id _call_id;
 
 DialingCallViewController *dialingcallviewcontroller;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    numberlabel.text = @"0988813668";
+    self.phoneNumber = @"";
+    self.numberFormatter = [[PhoneNumberFormatter alloc] init];
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleCallStatusChanged:)
@@ -36,7 +61,7 @@ DialingCallViewController *dialingcallviewcontroller;
                                              selector:@selector(handleRegisterStatus:)
                                                  name:@"SIPRegisterStatusNotification"
                                                object:nil];
-
+    
     self.view = [[UIView alloc]init];
     phonenumber = [[UITextField alloc]initWithFrame:CGRectMake(0,0, 100, 100)];
     
@@ -70,7 +95,155 @@ DialingCallViewController *dialingcallviewcontroller;
     
     
     //        self.editableText = [[UITextField alloc]initWithFrame:CGRectMake(50,0,self.frame.size.width-50,self.frame.size.height)];
+    
+ //   [self initMainView];
 }
+- (void)initMainView{
+    
+    onebut = [UIButton buttonWithType:UIButtonTypeCustom];
+    onebut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *oneImg = [UIImage imageNamed:@"1.png"];
+    [onebut setImage:oneImg forState:UIControlStateNormal];
+    
+  //  [onebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    onebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6,80,80);
+    
+    twobut = [UIButton buttonWithType:UIButtonTypeCustom];
+    twobut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *twoImg = [UIImage imageNamed:@"2.png"];
+    [twobut setImage:twoImg forState:UIControlStateNormal];
+    
+//    [twobut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    twobut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6,80,80);
+    
+    threebut = [UIButton buttonWithType:UIButtonTypeCustom];
+    threebut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *threeImg = [UIImage imageNamed:@"3.png"];
+    [threebut setImage:threeImg forState:UIControlStateNormal];
+    
+  //  [threebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    threebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6,80,80);
+    
+    fourbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    fourbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *fourImg = [UIImage imageNamed:@"4.png"];
+    [fourbut setImage:fourImg forState:UIControlStateNormal];
+    
+  //  [fourbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    fourbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
+    
+    fivebut = [UIButton buttonWithType:UIButtonTypeCustom];
+    fivebut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *fiveImg = [UIImage imageNamed:@"5.png"];
+    [fivebut setImage:fiveImg forState:UIControlStateNormal];
+    
+ //   [fivebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    fivebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
+    
+    sixbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    sixbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *sixImg = [UIImage imageNamed:@"6.png"];
+    [sixbut setImage:sixImg forState:UIControlStateNormal];
+    
+  //  [sixbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    sixbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*2,80,80);
+    
+    sevenbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    sevenbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *sevenImg = [UIImage imageNamed:@"7.png"];
+    [sevenbut setImage:sevenImg forState:UIControlStateNormal];
+    
+  //  [sevenbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    sevenbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/8,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
+    
+    eightbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    eightbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *eightImg = [UIImage imageNamed:@"8.png"];
+    [eightbut setImage:eightImg forState:UIControlStateNormal];
+    
+   // [onebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    eightbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
+    
+    ninebut = [UIButton buttonWithType:UIButtonTypeCustom];
+    ninebut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *nineImg = [UIImage imageNamed:@"9.png"];
+    [ninebut setImage:nineImg forState:UIControlStateNormal];
+    
+ //   [ninebut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    ninebut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*3,80,80);
+    
+    zerobut = [UIButton buttonWithType:UIButtonTypeCustom];
+    zerobut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *zeroImg = [UIImage imageNamed:@"0.png"];
+    [zerobut setImage:zeroImg forState:UIControlStateNormal];
+    
+   // [zerobut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    zerobut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*4,80,80);
+    
+    jinbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    jinbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *jinImg = [UIImage imageNamed:@"#.png"];
+    [jinbut setImage:jinImg forState:UIControlStateNormal];
+    
+   // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    jinbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*27,[UIScreen mainScreen].bounds.size.height/6*4,80,80);
+    
+    callbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    callbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *callImg = [UIImage imageNamed:@"answerImg.png"];
+    [callbut setImage:callImg forState:UIControlStateNormal];
+    
+    // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    callbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.5,[UIScreen mainScreen].bounds.size.height/6*5,80,80);
+    
+    
+    backbut = [UIButton buttonWithType:UIButtonTypeCustom];
+    backbut.backgroundColor = [UIColor clearColor];
+    
+    UIImage *backImg = [UIImage imageNamed:@"back.png"];
+    [backbut setImage:backImg forState:UIControlStateNormal];
+    
+    // [jinbut addTarget:self action:@selector(hangupButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    backbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/40*35,[UIScreen mainScreen].bounds.size.height/10,16,16);
+    
+    numberlabel = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/10,[UIScreen mainScreen].bounds.size.height/12, [UIScreen mainScreen].bounds.size.width/1.5, 30)];
+    [numberlabel setTextAlignment:NSTextAlignmentCenter];
+    [numberlabel setTextColor:(NSFoundationVersionNumber > NSFoundationVersionNumber_iOS_6_1) ? [UIColor blackColor] : [UIColor whiteColor]];
+    [numberlabel setFont:[UIFont boldSystemFontOfSize:30]];
+    [numberlabel setBackgroundColor:[UIColor clearColor]];
+    numberlabel.lineBreakMode = UILineBreakModeCharacterWrap;
+    self.phoneNumber = [self.phoneNumber stringByAppendingString:@"0988813668"];
+    numberlabel.text = [self.numberFormatter format:self.phoneNumber withLocale:@"US"];
+//    numberlabel.text = [self.numberFormatter format:self.phoneNumber withLocale:@"US"];
+    [self.view addSubview:onebut];
+    [self.view addSubview:twobut];
+    [self.view addSubview:threebut];
+    [self.view addSubview:fourbut];
+    [self.view addSubview:fivebut];
+    [self.view addSubview:sixbut];
+    [self.view addSubview:sevenbut];
+    [self.view addSubview:eightbut];
+    [self.view addSubview:ninebut];
+    [self.view addSubview:zerobut];
+    [self.view addSubview:jinbut];
+    [self.view addSubview:callbut];
+    [self.view addSubview:backbut];
+    [self.view addSubview:numberlabel];
+
+}
+
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
