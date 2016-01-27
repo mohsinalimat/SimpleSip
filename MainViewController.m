@@ -322,13 +322,14 @@ DialingCallViewController *dialingcallviewcontroller;
     pj_str_t dest_uri = pj_str((char *)targetUri.UTF8String);
     
     status = pjsua_call_make_call(acct_id, &dest_uri, 0, NULL, NULL, &_call_id);
-    
+    NSLog(@"ohohmake_call%d",acct_id);
     if (status != PJ_SUCCESS) {
         char  errMessage[PJ_ERR_MSG_SIZE];
         pj_strerror(status, errMessage, sizeof(errMessage));
         NSLog(@"Error in calling:%d(%s) !", status, errMessage);
     }else{
         dialingcallviewcontroller = [[DialingCallViewController alloc]init];
+        dialingcallviewcontroller.callId = _call_id;
         UIViewController *rootViewController = self;
         [rootViewController presentViewController:dialingcallviewcontroller animated:YES completion:nil];
 

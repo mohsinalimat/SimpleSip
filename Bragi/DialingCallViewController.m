@@ -12,7 +12,6 @@
 #import "MainViewController.h"
 //#import "DialPad.h"
 @interface DialingCallViewController(){
-    pjsua_call_id _call_id;
 }
 
 @end
@@ -90,7 +89,7 @@ MainViewController *mainviewcontroller;
     pjsua_call_id call_id = [notification.userInfo[@"call_id"] intValue];
     pjsip_inv_state state = [notification.userInfo[@"state"] intValue];
     
-    if(call_id != _call_id) return;
+    if(call_id != self.callId) return;
     if (state == PJSIP_INV_STATE_DISCONNECTED) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }else if(state == PJSIP_INV_STATE_CONNECTING){
@@ -103,7 +102,7 @@ MainViewController *mainviewcontroller;
 
 
 - (void)hangupButtonTouched:(id)sender {
-    pj_status_t status = pjsua_call_hangup(_call_id, 0, NULL, NULL);
+    pj_status_t status = pjsua_call_hangup((pjsua_call_id)self.callId, 0, NULL, NULL);
     
     if (status != PJ_SUCCESS) {
         const pj_str_t *statusText =  pjsip_get_status_text(status);
