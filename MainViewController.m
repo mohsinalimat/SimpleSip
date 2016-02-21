@@ -11,6 +11,7 @@
 #import <pjsua-lib/pjsua.h>
 #import "DialingCallViewController.h"
 #import "PhoneNumberFormatter.h"
+#import "AppDelegate.h"
 @interface MainViewController (){
     pjsua_call_id _call_id;
 }
@@ -46,14 +47,18 @@
 //pjsua_call_id _call_id;
 
 DialingCallViewController *dialingcallviewcontroller;
-
+//- init{
+//    NSLog(@"maininit");
+//    AppDelegate *delegate = [[AppDelegate alloc]init];
+////    self.window.rootViewController = delegate.tabbarController;
+//    
+//    return self;
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     numberField.text = @"";
     self.phoneNumber = @"";
     self.numberFormatter = [[PhoneNumberFormatter alloc] init];
-
-    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleCallStatusChanged:)
                                                  name:@"SIPCallStatusChangedNotification"

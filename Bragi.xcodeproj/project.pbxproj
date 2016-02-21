@@ -29,6 +29,8 @@
 		DCBD87CE1C57B61A00333BB5 /* PhoneNumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87CD1C57B61A00333BB5 /* PhoneNumberFormatter.m */; };
 		DCBD87D11C57C17E00333BB5 /* DialPad.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87D01C57C17E00333BB5 /* DialPad.m */; };
 		DCBD87D41C57CFCC00333BB5 /* GSPJUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */; };
+		DCC097471C795D0F00F78E6F /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC097461C795D0F00F78E6F /* HistoryViewController.m */; };
+		DCC0974A1C795F0D00F78E6F /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC097491C795F0D00F78E6F /* ContactViewController.m */; };
 		DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */; };
 		DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197A1C4FE3FF00EC8685 /* main.m */; };
 		DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */; };
@@ -106,6 +108,10 @@
 		DCBD87D01C57C17E00333BB5 /* DialPad.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DialPad.m; sourceTree = "<group>"; };
 		DCBD87D21C57CFCC00333BB5 /* GSPJUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPJUtil.h; sourceTree = "<group>"; };
 		DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPJUtil.m; sourceTree = "<group>"; };
+		DCC097451C795D0500F78E6F /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		DCC097461C795D0F00F78E6F /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		DCC097481C795F0400F78E6F /* ContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
+		DCC097491C795F0D00F78E6F /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
 		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestWebService.h; path = Bragi/RestWebService.h; sourceTree = "<group>"; };
 		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestWebService.m; path = Bragi/RestWebService.m; sourceTree = "<group>"; };
 		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,6 +269,10 @@
 				DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */,
 				DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */,
 				DCC819781C4FE3FF00EC8685 /* Supporting Files */,
+				DCC097451C795D0500F78E6F /* HistoryViewController.h */,
+				DCC097461C795D0F00F78E6F /* HistoryViewController.m */,
+				DCC097481C795F0400F78E6F /* ContactViewController.h */,
+				DCC097491C795F0D00F78E6F /* ContactViewController.m */,
 			);
 			path = Bragi;
 			sourceTree = "<group>";
@@ -508,12 +518,14 @@
 				DCBD86FE1C52535300333BB5 /* DialingCallViewController.m in Sources */,
 				DCBD87D11C57C17E00333BB5 /* DialPad.m in Sources */,
 				DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */,
+				DCC0974A1C795F0D00F78E6F /* ContactViewController.m in Sources */,
 				DCC819811C4FE3FF00EC8685 /* Bragi.xcdatamodeld in Sources */,
 				DCE6B1161C51F671002CEAFC /* IncomingCallViewController.m in Sources */,
 				DCBD87D41C57CFCC00333BB5 /* GSPJUtil.m in Sources */,
 				DCC819841C4FE3FF00EC8685 /* ViewController.m in Sources */,
 				DCC81C821C50B80D00EC8685 /* MainViewController.m in Sources */,
 				DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */,
+				DCC097471C795D0F00F78E6F /* HistoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

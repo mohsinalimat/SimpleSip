@@ -10,7 +10,8 @@
 #import "AppDelegate.h"
 #import "MainViewController.h"
 #import "IncomingCallViewController.h"
-
+#import "HistoryViewController.h"
+#import "ContactViewController.h"
 static pjsua_acc_id acc_id;
 
 static void on_incoming_call(pjsua_acc_id acc_id, pjsua_call_id call_id, pjsip_rx_data *rdata);
@@ -20,10 +21,14 @@ static void on_reg_state(pjsua_acc_id acc_id);
 
 IncomingCallViewController *incomingcontroller;
 @interface AppDelegate ()
+@property (nonatomic, strong) UINavigationController *navigationController;
+@property (nonatomic, strong) UITabBarController *tabBarController;
 
 @end
 
 @implementation AppDelegate
+//@synthesize tabbarController = _tabbarController;
+
 //used in restApi
 static dispatch_once_t once;
 static NSOperationQueue *connectionQueue;
@@ -42,14 +47,23 @@ static NSOperationQueue *connectionQueue;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
    // [[MainViewController alloc]init];
-    MainViewController *mainviewcontroller = [[MainViewController alloc]init];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    self.window.rootViewController = mainviewcontroller;
+   // [self initTabbar];
 
+//    MainViewController *mainviewcontroller = [[MainViewController alloc]init];
+//    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    // Override point for customization after application launch.
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    [self.window makeKeyAndVisible];
+//  //  self.window.rootViewController = self.navigationController;
+//    self.window.rootViewController = mainviewcontroller;
+//    
+//for WX test
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    self.window.rootViewController = self.navigationController;
+    [self.window makeKeyAndVisible];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleIncommingCall:)
                                                  name:@"SIPIncomingCallNotification"
@@ -335,6 +349,137 @@ static void on_reg_state(pjsua_acc_id acc_id) {
     dispatch_async(dispatch_get_main_queue(), ^{
         [[NSNotificationCenter defaultCenter] postNotificationName:@"SIPRegisterStatusNotification" object:nil userInfo:argument];
     });
+}
+
+//- (void)initTabbar{
+//    NSLog(@"initTabbar");
+//    HistoryViewController *vc1 = [[HistoryViewController alloc] init];
+//    UINavigationController *na1 = [[UINavigationController alloc] initWithRootViewController:vc1] ;
+//    na1.navigationBar.barStyle = UIBarStyleBlack;
+//    
+//    
+//    ContactViewController *vc2 = [[ContactViewController alloc] init];
+//    UINavigationController *na2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+//    na2.navigationBar.barStyle = UIBarStyleBlack;
+//    
+//    
+//    self.tabbarController = [[UITabBarController alloc] init];
+//    self.tabbarController.viewControllers = [NSArray arrayWithObjects:na1, na2,  nil];
+//    
+//    
+//    
+//    
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    shadow.shadowColor = [UIColor colorWithRed:0.0 green:0.0 blue:0.0 alpha:0.8];
+//    shadow.shadowOffset = CGSizeMake(0, 1);
+//    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys:
+//                                                           [UIColor colorWithRed:245.0/255.0 green:245.0/255.0 blue:245.0/255.0 alpha:1.0], NSForegroundColorAttributeName,
+//                                                           /*shadow, NSShadowAttributeName,*/
+//                                                           [UIFont fontWithName:@"Markerfelt-Thin" size:22.0], NSFontAttributeName, nil]];
+//    
+//    if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) {
+//    //    KITsDataHolder * holder = [KITsDataHolder defaultHolder];//change tint color
+//        [[UITabBar appearance] setBarTintColor:[UIColor whiteColor]];
+//        [[UITabBar appearance] setTintColor:[UIColor blackColor]];
+//  //      [[UITabBar appearance] setTintColor:holder.detailTextLabelColor];
+//        //self.tabbarController.tabBar.barTintColor = [UIColor whiteColor];
+//        //self.tabbarController.tabBar.tintColor = holder.detailTextLabelColor;
+//    }
+//
+//    
+//}
+
+- (UINavigationController *)navigationController {
+    if (_navigationController == nil) {
+        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.tabBarController];
+        navigationController.navigationBar.tintColor = [UIColor colorWithRed:26 / 255.0 green:178 / 255.0 blue:10 / 255.0 alpha:1];
+        _navigationController = navigationController;
+    }
+    return _navigationController;
+}
+
+- (UITabBarController *)tabBarController {
+    if (_tabBarController == nil) {
+        UITabBarController *tabBarController = [[UITabBarController alloc] init];
+        
+        MainViewController *mainframeViewController = ({
+            MainViewController *mainframeViewController = [[MainViewController alloc] init];
+            
+            UIImage *mainframeImage   = [UIImage imageNamed:@"muteImg"];
+            UIImage *mainframeHLImage = [UIImage imageNamed:@"ampImg"];
+            
+            mainframeViewController.title = @"微信";
+            mainframeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:mainframeImage selectedImage:mainframeHLImage];
+            mainframeViewController.view.backgroundColor = [UIColor colorWithRed:48 / 255.0 green:67 / 255.0 blue:78 / 255.0 alpha:1];
+            mainframeViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
+                                                                                                         style:UIBarButtonItemStylePlain
+                                                                                                        target:self
+                                                                                                        action:@selector(didClickAddButton:)];
+            
+            mainframeViewController;
+        });
+        
+        HistoryViewController *contactsViewController = ({
+            HistoryViewController *contactsViewController = [[HistoryViewController alloc] init];
+            
+            UIImage *contactsImage   = [UIImage imageNamed:@"hangupImg"];
+            UIImage *contactsHLImage = [UIImage imageNamed:@"answerImg"];
+            
+            contactsViewController.title = @"通讯录";
+            contactsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通讯录" image:contactsImage selectedImage:contactsHLImage];
+            contactsViewController.view.backgroundColor = [UIColor colorWithRed:115 / 255.0 green:155 / 255.0 blue:6 / 255.0 alpha:1];
+            
+            contactsViewController;
+        });
+        
+//        ViewController *discoverViewController = ({
+//            ViewController *discoverViewController = [[ViewController alloc] init];
+//            
+//            UIImage *discoverImage   = [UIImage imageNamed:@"tabbar_discover"];
+//            UIImage *discoverHLImage = [UIImage imageNamed:@"tabbar_discoverHL"];
+//            
+//            discoverViewController.title = @"发现";
+//            discoverViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"发现" image:discoverImage selectedImage:discoverHLImage];
+//            discoverViewController.view.backgroundColor = [UIColor colorWithRed:32 / 255.0 green:85 / 255.0 blue:128 / 255.0 alpha:1];
+//            
+//            discoverViewController;
+//        });
+//        
+//        ViewController *meViewController = ({
+//            ViewController *meViewController = [[ViewController alloc] init];
+//            
+//            UIImage *meImage   = [UIImage imageNamed:@"tabbar_me"];
+//            UIImage *meHLImage = [UIImage imageNamed:@"tabbar_meHL"];
+//            
+//            meViewController.title = @"我";
+//            meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:meImage selectedImage:meHLImage];
+//            meViewController.view.backgroundColor = [UIColor colorWithRed:199 / 255.0 green:135 / 255.0 blue:56 / 255.0 alpha:1];
+//            
+//            meViewController;
+//        });
+        
+        tabBarController.title = @"微信";
+        tabBarController.tabBar.tintColor = [UIColor colorWithRed:26 / 255.0 green:178 / 255.0 blue:10 / 255.0 alpha:1];
+        
+        tabBarController.viewControllers = @[
+                                             [[UINavigationController alloc] initWithRootViewController:mainframeViewController],
+                                             [[UINavigationController alloc] initWithRootViewController:contactsViewController],
+//                                             [[UINavigationController alloc] initWithRootViewController:discoverViewController],
+//                                             [[UINavigationController alloc] initWithRootViewController:meViewController],
+                                             ];
+        
+        _tabBarController = tabBarController;
+    }
+    return _tabBarController;
+}
+
+- (void)didClickAddButton:(id)sender {
+//    ViewController *viewController = [[ViewController alloc] init];
+//    
+//    viewController.title = @"添加";
+//    viewController.view.backgroundColor = [UIColor colorWithRed:26 / 255.0 green:178 / 255.0 blue:10 / 255.0 alpha:1];
+//    
+//    [self.navigationController pushViewController:viewController animated:YES];
 }
 
 

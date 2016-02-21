@@ -17,7 +17,7 @@
 @interface MainViewController : UIViewController<UITextFieldDelegate>
 @property (strong,nonatomic) UITextField  *phonenumber;
 @property (strong,nonatomic) UIButton *callbut;
-
+@property (strong,nonatomic) UIWindow *window;
 @property (strong,nonatomic) UIButton *onebut;
 @property (strong,nonatomic) UIButton *twobut;
 @property (strong,nonatomic) UIButton *threebut;
