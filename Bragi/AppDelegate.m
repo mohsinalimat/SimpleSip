@@ -405,67 +405,48 @@ static void on_reg_state(pjsua_acc_id acc_id) {
         MainViewController *mainframeViewController = ({
             MainViewController *mainframeViewController = [[MainViewController alloc] init];
             
-            UIImage *mainframeImage   = [UIImage imageNamed:@"muteImg"];
-            UIImage *mainframeHLImage = [UIImage imageNamed:@"ampImg"];
+            UIImage *mainframeImage   = [UIImage imageNamed:@"dialpadtab"];
+            UIImage *mainframeHLImage = [UIImage imageNamed:@"dialpadtab"];
             
-            mainframeViewController.title = @"微信";
-            mainframeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"微信" image:mainframeImage selectedImage:mainframeHLImage];
-            mainframeViewController.view.backgroundColor = [UIColor colorWithRed:48 / 255.0 green:67 / 255.0 blue:78 / 255.0 alpha:1];
-            mainframeViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"barbuttonicon_add"]
-                                                                                                         style:UIBarButtonItemStylePlain
-                                                                                                        target:self
-                                                                                                        action:@selector(didClickAddButton:)];
-            
+           // mainframeViewController.title = @"數字鍵盤";
+            mainframeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"數字鍵盤" image:mainframeImage selectedImage:mainframeHLImage];
+            mainframeViewController.view.backgroundColor = [UIColor colorWithRed:255 / 255.0 green:255 / 255.0 blue:255 / 255.0 alpha:1];
             mainframeViewController;
         });
         
         HistoryViewController *contactsViewController = ({
             HistoryViewController *contactsViewController = [[HistoryViewController alloc] init];
             
-            UIImage *contactsImage   = [UIImage imageNamed:@"hangupImg"];
-            UIImage *contactsHLImage = [UIImage imageNamed:@"answerImg"];
+            UIImage *contactsImage   = [UIImage imageNamed:@"recenttab"];
+            UIImage *contactsHLImage = [UIImage imageNamed:@"recenttab"];
             
-            contactsViewController.title = @"通讯录";
-            contactsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通讯录" image:contactsImage selectedImage:contactsHLImage];
-            contactsViewController.view.backgroundColor = [UIColor colorWithRed:115 / 255.0 green:155 / 255.0 blue:6 / 255.0 alpha:1];
+            //contactsViewController.title = @"通話紀錄";
+            contactsViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"通話紀錄" image:contactsImage selectedImage:contactsHLImage];
+        //    contactsViewController.view.backgroundColor = [UIColor colorWithRed:115 / 255.0 green:155 / 255.0 blue:6 / 255.0 alpha:1];
             
             contactsViewController;
         });
         
-//        ViewController *discoverViewController = ({
-//            ViewController *discoverViewController = [[ViewController alloc] init];
-//            
-//            UIImage *discoverImage   = [UIImage imageNamed:@"tabbar_discover"];
-//            UIImage *discoverHLImage = [UIImage imageNamed:@"tabbar_discoverHL"];
-//            
-//            discoverViewController.title = @"发现";
-//            discoverViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"发现" image:discoverImage selectedImage:discoverHLImage];
+        ContactViewController *discoverViewController = ({
+            ContactViewController *discoverViewController = [[ContactViewController alloc] init];
+            
+            UIImage *discoverImage   = [UIImage imageNamed:@"contacttab"];
+            UIImage *discoverHLImage = [UIImage imageNamed:@"contacttab"];
+            
+         //   discoverViewController.title = @"聯絡人";
+            discoverViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"聯絡人" image:discoverImage selectedImage:discoverHLImage];
 //            discoverViewController.view.backgroundColor = [UIColor colorWithRed:32 / 255.0 green:85 / 255.0 blue:128 / 255.0 alpha:1];
-//            
-//            discoverViewController;
-//        });
-//        
-//        ViewController *meViewController = ({
-//            ViewController *meViewController = [[ViewController alloc] init];
-//            
-//            UIImage *meImage   = [UIImage imageNamed:@"tabbar_me"];
-//            UIImage *meHLImage = [UIImage imageNamed:@"tabbar_meHL"];
-//            
-//            meViewController.title = @"我";
-//            meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"我" image:meImage selectedImage:meHLImage];
-//            meViewController.view.backgroundColor = [UIColor colorWithRed:199 / 255.0 green:135 / 255.0 blue:56 / 255.0 alpha:1];
-//            
-//            meViewController;
-//        });
+            
+            discoverViewController;
+        });
         
-        tabBarController.title = @"微信";
+        
         tabBarController.tabBar.tintColor = [UIColor colorWithRed:26 / 255.0 green:178 / 255.0 blue:10 / 255.0 alpha:1];
         
         tabBarController.viewControllers = @[
                                              [[UINavigationController alloc] initWithRootViewController:mainframeViewController],
                                              [[UINavigationController alloc] initWithRootViewController:contactsViewController],
-//                                             [[UINavigationController alloc] initWithRootViewController:discoverViewController],
-//                                             [[UINavigationController alloc] initWithRootViewController:meViewController],
+                                             [[UINavigationController alloc] initWithRootViewController:discoverViewController],
                                              ];
         
         _tabBarController = tabBarController;

@@ -31,6 +31,9 @@
 		DCBD87D41C57CFCC00333BB5 /* GSPJUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */; };
 		DCC097471C795D0F00F78E6F /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC097461C795D0F00F78E6F /* HistoryViewController.m */; };
 		DCC0974A1C795F0D00F78E6F /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC097491C795F0D00F78E6F /* ContactViewController.m */; };
+		DCC0974E1C7AA85F00F78E6F /* contacttab.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC0974B1C7AA85F00F78E6F /* contacttab.png */; };
+		DCC0974F1C7AA85F00F78E6F /* dialpadtab.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC0974C1C7AA85F00F78E6F /* dialpadtab.png */; };
+		DCC097501C7AA85F00F78E6F /* recenttab.png in Resources */ = {isa = PBXBuildFile; fileRef = DCC0974D1C7AA85F00F78E6F /* recenttab.png */; };
 		DCC0CD9B1C514B6A00A7D00E /* RestWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */; };
 		DCC8197B1C4FE3FF00EC8685 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197A1C4FE3FF00EC8685 /* main.m */; };
 		DCC8197E1C4FE3FF00EC8685 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */; };
@@ -112,6 +115,9 @@
 		DCC097461C795D0F00F78E6F /* HistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		DCC097481C795F0400F78E6F /* ContactViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContactViewController.h; sourceTree = "<group>"; };
 		DCC097491C795F0D00F78E6F /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactViewController.m; sourceTree = "<group>"; };
+		DCC0974B1C7AA85F00F78E6F /* contacttab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = contacttab.png; path = Bragi/images/contacttab.png; sourceTree = "<group>"; };
+		DCC0974C1C7AA85F00F78E6F /* dialpadtab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = dialpadtab.png; path = Bragi/images/dialpadtab.png; sourceTree = "<group>"; };
+		DCC0974D1C7AA85F00F78E6F /* recenttab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recenttab.png; path = Bragi/images/recenttab.png; sourceTree = "<group>"; };
 		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestWebService.h; path = Bragi/RestWebService.h; sourceTree = "<group>"; };
 		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestWebService.m; path = Bragi/RestWebService.m; sourceTree = "<group>"; };
 		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,6 +231,9 @@
 				DCE6B11E1C52271D002CEAFC /* hangupImg.png */,
 				DCBD86FF1C52583900333BB5 /* mute.png */,
 				DCBD87011C525DBB00333BB5 /* muteImg.png */,
+				DCC0974B1C7AA85F00F78E6F /* contacttab.png */,
+				DCC0974C1C7AA85F00F78E6F /* dialpadtab.png */,
+				DCC0974D1C7AA85F00F78E6F /* recenttab.png */,
 				DCBD870D1C52632500333BB5 /* dialpadImg.png */,
 				DCBD87091C5260A800333BB5 /* ampImg.png */,
 				DCC0CD991C514B6A00A7D00E /* RestWebService.h */,
@@ -477,10 +486,13 @@
 				DCC819871C4FE3FF00EC8685 /* Main.storyboard in Resources */,
 				DCBD870E1C52632500333BB5 /* dialpadImg.png in Resources */,
 				DCE6B1201C52271D002CEAFC /* hangupImg.png in Resources */,
+				DCC0974E1C7AA85F00F78E6F /* contacttab.png in Resources */,
 				DCBD87021C525DBB00333BB5 /* muteImg.png in Resources */,
 				DCBD87001C52583900333BB5 /* mute.png in Resources */,
 				DCBD87C41C57A89E00333BB5 /* 8.png in Resources */,
+				DCC0974F1C7AA85F00F78E6F /* dialpadtab.png in Resources */,
 				DCBD87C11C57A89E00333BB5 /* 5.png in Resources */,
+				DCC097501C7AA85F00F78E6F /* recenttab.png in Resources */,
 				DCBD87C31C57A89E00333BB5 /* 7.png in Resources */,
 				DCBD87BE1C57A89E00333BB5 /* 2.png in Resources */,
 				DCBD870A1C5260A800333BB5 /* ampImg.png in Resources */,
