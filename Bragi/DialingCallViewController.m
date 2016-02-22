@@ -11,6 +11,7 @@
 #import <pjsua-lib/pjsua.h>
 #import "MainViewController.h"
 #import "DialPad.h"
+#import <AVFoundation/AVFoundation.h>
 @interface DialingCallViewController(){
 }
 
@@ -52,6 +53,8 @@ MainViewController *mainviewcontroller;
     UIImage *ampImg = [UIImage imageNamed:@"ampImg"];
     [amplbut setImage:ampImg forState:UIControlStateNormal];
     amplbut.frame = CGRectMake([UIScreen mainScreen].bounds.size.width*0.9-64, [UIScreen mainScreen].bounds.size.height/2-100, 64, 64);
+    [amplbut addTarget:self action:@selector(ampVoice:) forControlEvents:UIControlEventTouchUpInside];
+
     //hangupnutton
     
     hangupbut = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -82,6 +85,34 @@ MainViewController *mainviewcontroller;
     [rootViewController presentViewController:pad animated:YES completion:nil];
 
 }
+
+- (void)ampVoice:(id)sender{
+    NSLog(@"ampVoice");
+    NSError *error;
+    AVAudioSession *audioSession = [AVAudioSession sharedInstance];
+    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
+    if(error)
+    {
+        NSLog(@"STKAudioManager: AudioSession cannot use speakers");
+    }
+  //  [self setAudioOutputSpeaker:YES];
+}
+- (void)setAudioOutputSpeaker:(BOOL)enabled
+{
+    NSLog(@"setAudio");
+    AVAudioSession *session =   [AVAudioSession sharedInstance];
+    NSError *error;
+    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
+    [session setMode:AVAudioSessionModeVoiceChat error:&error];
+    if (enabled) // Enable speaker
+        [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
+    else // Disable speaker
+        [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:&error];
+    [session setActive:YES error:&error];
+}
+
+
+
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
@@ -94,9 +125,9 @@ MainViewController *mainviewcontroller;
     if (state == PJSIP_INV_STATE_DISCONNECTED) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }else if(state == PJSIP_INV_STATE_CONNECTING){
-        NSLog(@"连接中...");
+        NSLog(@"連接中...");
     } else if(state == PJSIP_INV_STATE_CONFIRMED) {
-        NSLog(@"接听成功！");
+        NSLog(@"接聽成功！");
     }
     
 }

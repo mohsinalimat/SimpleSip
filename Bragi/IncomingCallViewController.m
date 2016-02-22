@@ -75,9 +75,9 @@
     if (state == PJSIP_INV_STATE_DISCONNECTED) {
         [self dismissViewControllerAnimated:YES completion:nil];
     } else if(state == PJSIP_INV_STATE_CONNECTING){
-        NSLog(@"连接中...");
+        NSLog(@"連接中...");
     } else if(state == PJSIP_INV_STATE_CONFIRMED) {
-        NSLog(@"接听成功！");
+        NSLog(@"接聽成功！");
     }
 }
 //-(void) stopotherapp{
