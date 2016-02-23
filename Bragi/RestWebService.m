@@ -33,15 +33,11 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     NSLog(@"authKey:%@",authKey);
     
     NSError *error = nil;
-    NSMutableURLRequest *muRequest = [self initRequest:@"http://192.168.1.1:3676/login" andMethod:@"POST"];
+    NSMutableURLRequest *muRequest = [self initRequest:@"API/login" andMethod:@"POST"];
     
-    //http://<gateway:appPort>/login
     NSDictionary *mapData = [NSDictionary dictionaryWithObjectsAndKeys:authKey,@"AUTH:",nil];
-
-    NSLog(@"mapdData of login %@",mapData);
     NSData *requestBodyData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&error];
     muRequest.HTTPBody = requestBodyData;
-   // NSURLResponse * response = nil;
     
     [[NetworkActivityIndicatorManager sharedManager]startActivity];
     
@@ -50,7 +46,7 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
          [[NetworkActivityIndicatorManager sharedManager] endActivity];
          // Check to make sure there are no errors
          if (error) {
-             NSLog(@"Error in uploadHistory: %@ %@", error, [error localizedDescription]);
+             NSLog(@"Error: %@ %@", error, [error localizedDescription]);
              completionBlock(NO, nil, error);
          } else if (!response) {
              completionBlock(NO, nil, error);
@@ -59,8 +55,7 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
          } else {
              
              NSDictionary *dictrc = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-             NSLog(@"uploadHistory return%@",dictrc);
-             //NSLog(@"%@",[dictrc objectForKey:@"status"]);
+             NSLog(@"return%@",dictrc);
              completionBlock(YES, dictrc, nil);
          }
      }];
@@ -69,17 +64,17 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
 
 +(NSDictionary* )getSIPInfo{
     DataHolder *holder = [DataHolder sharedDataHolder];
-    NSString* urlString = [NSString stringWithFormat:@"http://192.168.1.1:3676/voip/account?%@",holder.deviceID];
+    NSString* urlString = [NSString stringWithFormat:@"API/voip/account?%@",holder.deviceID];
     NSError *error = nil;
-    NSLog(@"getMapped url %@",urlString);
+    NSLog(@"url %@",urlString);
     NSMutableURLRequest *muRequest = [self initRequest:urlString andMethod:@"GET"];
     NSURLResponse * response = nil;
     [[NetworkActivityIndicatorManager sharedManager] startActivity];
     NSData *data = [NSURLConnection sendSynchronousRequest:muRequest returningResponse:&response error:&error];
     [[NetworkActivityIndicatorManager sharedManager] endActivity];
-    NSLog(@"response by getUUID");
+    NSLog(@"response");
     if(error){
-        NSLog(@"error in getUUID %@",error);
+        NSLog(@"error %@",error);
         NSDictionary* errorDict = [RestWebService errorDiscriptor:error];
         return errorDict;
     }
@@ -87,17 +82,16 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 +(NSDictionary* )getContacts{
-    NSString* urlString = [NSString stringWithFormat:@"http://192.168.1.1:3676/voip/contact"];
+    NSString* urlString = [NSString stringWithFormat:@"API/voip/contact"];
     NSError *error = nil;
-    NSLog(@"getMapped url %@",urlString);
     NSMutableURLRequest *muRequest = [self initRequest:urlString andMethod:@"GET"];
     NSURLResponse * response = nil;
     [[NetworkActivityIndicatorManager sharedManager] startActivity];
     NSData *data = [NSURLConnection sendSynchronousRequest:muRequest returningResponse:&response error:&error];
     [[NetworkActivityIndicatorManager sharedManager] endActivity];
-    NSLog(@"response by getUUID");
+    NSLog(@"response");
     if(error){
-        NSLog(@"error in getUUID %@",error);
+        NSLog(@"error %@",error);
         NSDictionary* errorDict = [RestWebService errorDiscriptor:error];
         return errorDict;
     }
@@ -132,11 +126,8 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     return errorDict;
 }
 +(NSMutableURLRequest *)initRequest:(NSString *)url andMethod:(NSString *)method{
-    // NSMutableURLRequest *muRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]  cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:10.0];
     NSMutableURLRequest *muRequest = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]  cachePolicy:NSURLRequestReloadIgnoringLocalAndRemoteCacheData timeoutInterval:12.0];
-    
-    //muRequest.HTTPMethod = method;
-    [muRequest setHTTPMethod:method];
+        [muRequest setHTTPMethod:method];
     [muRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     [muRequest setValue:APIKey forHTTPHeaderField:@"apiKey"];
     [muRequest setValue:@"no-cache" forHTTPHeaderField:@"cache-control"];
@@ -179,7 +170,6 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     struct ifaddrs *temp_addr = NULL;
     int success = 0;
     
-    // retrieve the current interfaces - returns 0 on success
     success = getifaddrs(&interfaces);
     if (success == 0)
     {

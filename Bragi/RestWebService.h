@@ -18,7 +18,7 @@ typedef void (^myCompletionBlock)(BOOL success, NSDictionary *string, NSError *e
 +(NSDictionary* )getSIPInfo;//Bragi
 +(NSDictionary* )getContacts;//Bragi
 
--(NSString*)getIPAddress;//Bragi
++(NSString*)getIPAddress;//Bragi
 
 //@property(nonatomic,retain) NSString* number;
 //@property(nonatomic,retain) NSString* token;
