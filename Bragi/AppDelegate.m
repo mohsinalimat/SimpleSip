@@ -45,20 +45,8 @@ static NSOperationQueue *connectionQueue;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-   // [[MainViewController alloc]init];
-   // [self initTabbar];
+    [NSThread sleepForTimeInterval:3.0];//time delay as loading
 
-//    MainViewController *mainviewcontroller = [[MainViewController alloc]init];
-//    
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    // Override point for customization after application launch.
-//    self.window.backgroundColor = [UIColor whiteColor];
-//    [self.window makeKeyAndVisible];
-//  //  self.window.rootViewController = self.navigationController;
-//    self.window.rootViewController = mainviewcontroller;
-//    
-//for WX test
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.rootViewController = self.navigationController;

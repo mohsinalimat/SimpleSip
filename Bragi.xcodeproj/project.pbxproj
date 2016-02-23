@@ -124,8 +124,8 @@
 		DCC097521C7C728000F78E6F /* NetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		DCC097541C7C84A900F78E6F /* DataHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataHolder.m; sourceTree = "<group>"; };
 		DCC097561C7C84B300F78E6F /* DataHolder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataHolder.h; sourceTree = "<group>"; };
-		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestWebService.h; path = Bragi/RestWebService.h; sourceTree = "<group>"; };
-		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestWebService.m; path = Bragi/RestWebService.m; sourceTree = "<group>"; };
+		DCC0CD991C514B6A00A7D00E /* RestWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestWebService.h; sourceTree = "<group>"; };
+		DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestWebService.m; sourceTree = "<group>"; };
 		DCC819751C4FE3FF00EC8685 /* Bragi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bragi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCC819791C4FE3FF00EC8685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DCC8197A1C4FE3FF00EC8685 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -246,8 +246,6 @@
 				DCC0974D1C7AA85F00F78E6F /* recenttab.png */,
 				DCBD870D1C52632500333BB5 /* dialpadImg.png */,
 				DCBD87091C5260A800333BB5 /* ampImg.png */,
-				DCC0CD991C514B6A00A7D00E /* RestWebService.h */,
-				DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */,
 				DCC819771C4FE3FF00EC8685 /* Bragi */,
 				DCC819A11C4FE42700EC8685 /* PJSIP */,
 				DCC819941C4FE3FF00EC8685 /* BragiTests */,
@@ -267,12 +265,10 @@
 		DCC819771C4FE3FF00EC8685 /* Bragi */ = {
 			isa = PBXGroup;
 			children = (
-				DCBD87D21C57CFCC00333BB5 /* GSPJUtil.h */,
-				DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */,
 				DCC8197C1C4FE3FF00EC8685 /* AppDelegate.h */,
+				DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */,
 				DCBD87CC1C57B61900333BB5 /* PhoneNumberFormatter.h */,
 				DCBD87CD1C57B61A00333BB5 /* PhoneNumberFormatter.m */,
-				DCC8197D1C4FE3FF00EC8685 /* AppDelegate.m */,
 				DCC819821C4FE3FF00EC8685 /* ViewController.h */,
 				DCC819831C4FE3FF00EC8685 /* ViewController.m */,
 				DCC819851C4FE3FF00EC8685 /* Main.storyboard */,
@@ -284,6 +280,10 @@
 				DCBD86FD1C52535300333BB5 /* DialingCallViewController.m */,
 				DCBD87CF1C57C16D00333BB5 /* DialPad.h */,
 				DCBD87D01C57C17E00333BB5 /* DialPad.m */,
+				DCC0CD991C514B6A00A7D00E /* RestWebService.h */,
+				DCC0CD9A1C514B6A00A7D00E /* RestWebService.m */,
+				DCBD87D21C57CFCC00333BB5 /* GSPJUtil.h */,
+				DCBD87D31C57CFCC00333BB5 /* GSPJUtil.m */,
 				DCC819881C4FE3FF00EC8685 /* Images.xcassets */,
 				DCC8198A1C4FE3FF00EC8685 /* LaunchScreen.xib */,
 				DCC8197F1C4FE3FF00EC8685 /* Bragi.xcdatamodeld */,

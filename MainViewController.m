@@ -58,6 +58,32 @@ DialingCallViewController *dialingcallviewcontroller;
 //    
 //    return self;
 //}
+//- (void)viewDidAppear:(BOOL)animated{
+//    [self.view setBackgroundColor:[UIColor whiteColor]];
+//    [UIView animateWithDuration:5.0//進行時間
+//                          delay:1.5//延遲多久開始動畫
+//                        options:(UIViewAnimationCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction)
+//                     animations:^{
+//                      //   self.logoImageView.alpha = 1.0;
+//                     }
+//                     completion:^(BOOL finished){
+//                         
+//                         [UIView animateWithDuration:0.5
+//                                               delay:1.5
+//                                             options:(UIViewAnimationCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction)
+//                                          animations:^{
+//                                              // self.subtitleLabel.alpha = 1.0;
+//                                          }
+//                                          completion:^(BOOL finished){
+//                                              //AppDelegate *app = [UIApplication sharedApplication].delegate;
+////                                              [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(loadMainView) userInfo:nil repeats:NO];
+//                                              //app.window.rootViewController = app.topViewController;
+//                                          }
+//                          ];
+//                         
+//                     }
+//     ];
+//}
 - (void)viewDidLoad {
     [super viewDidLoad];
     numberField.text = @"";

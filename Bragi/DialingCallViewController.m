@@ -25,7 +25,8 @@
 @synthesize hangupbut;
 @synthesize callId;
 @synthesize phoneNumber;
-
+BOOL enabled = true;
+int count = 0 ;
 MainViewController *mainviewcontroller;
 -(void)viewDidLoad {
     [super viewDidLoad];
@@ -87,32 +88,26 @@ MainViewController *mainviewcontroller;
 }
 
 - (void)ampVoice:(id)sender{
+    count++;
     NSLog(@"ampVoice");
     NSError *error;
     AVAudioSession *audioSession = [AVAudioSession sharedInstance];
-    [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
     if(error)
     {
-        NSLog(@"STKAudioManager: AudioSession cannot use speakers");
+        NSLog(@"AudioSession cannot use speakers");
+    }else if(count%2==1){
+        NSLog(@"ampVoicecount%ic",count);
+
+        [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
+
+    }else{
+        NSLog(@"ampVoicecount%ic",count);
+
+        [audioSession overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:&error];
+
     }
   //  [self setAudioOutputSpeaker:YES];
 }
-- (void)setAudioOutputSpeaker:(BOOL)enabled
-{
-    NSLog(@"setAudio");
-    AVAudioSession *session =   [AVAudioSession sharedInstance];
-    NSError *error;
-    [session setCategory:AVAudioSessionCategoryPlayAndRecord error:&error];
-    [session setMode:AVAudioSessionModeVoiceChat error:&error];
-    if (enabled) // Enable speaker
-        [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&error];
-    else // Disable speaker
-        [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:&error];
-    [session setActive:YES error:&error];
-}
-
-
-
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }

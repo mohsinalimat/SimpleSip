@@ -33,7 +33,7 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     NSLog(@"authKey:%@",authKey);
     
     NSError *error = nil;
-    NSMutableURLRequest *muRequest = [self initRequest:@"API/login" andMethod:@"POST"];
+    NSMutableURLRequest *muRequest = [self initRequest:@"http://API:3676/login" andMethod:@"POST"];
     
     NSDictionary *mapData = [NSDictionary dictionaryWithObjectsAndKeys:authKey,@"AUTH:",nil];
     NSData *requestBodyData = [NSJSONSerialization dataWithJSONObject:mapData options:0 error:&error];
@@ -64,7 +64,7 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
 
 +(NSDictionary* )getSIPInfo{
     DataHolder *holder = [DataHolder sharedDataHolder];
-    NSString* urlString = [NSString stringWithFormat:@"API/voip/account?%@",holder.deviceID];
+    NSString* urlString = [NSString stringWithFormat:@"http://API:3676/voip/account?%@",holder.deviceID];
     NSError *error = nil;
     NSLog(@"url %@",urlString);
     NSMutableURLRequest *muRequest = [self initRequest:urlString andMethod:@"GET"];
@@ -82,7 +82,7 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
 +(NSDictionary* )getContacts{
-    NSString* urlString = [NSString stringWithFormat:@"API/voip/contact"];
+    NSString* urlString = [NSString stringWithFormat:@"http://API:3676/voip/contact"];
     NSError *error = nil;
     NSMutableURLRequest *muRequest = [self initRequest:urlString andMethod:@"GET"];
     NSURLResponse * response = nil;
