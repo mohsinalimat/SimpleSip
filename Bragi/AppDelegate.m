@@ -32,17 +32,17 @@ IncomingCallViewController *incomingcontroller;
 //used in restApi
 static dispatch_once_t once;
 static NSOperationQueue *connectionQueue;
-//+ (NSOperationQueue *)connectionQueue
-//{
-//    dispatch_once(&once, ^{
-//        connectionQueue = [[NSOperationQueue alloc] init];
-//        [connectionQueue setMaxConcurrentOperationCount:2];
-//        [connectionQueue setName:@"com.mycompany.connectionqueue"];
-//        
-//    });
-//    
-//    return connectionQueue;
-//}
++ (NSOperationQueue *)connectionQueue
+{
+    dispatch_once(&once, ^{
+        connectionQueue = [[NSOperationQueue alloc] init];
+        [connectionQueue setMaxConcurrentOperationCount:2];
+        [connectionQueue setName:@"com.mycompany.connectionqueue"];
+        
+    });
+    
+    return connectionQueue;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.

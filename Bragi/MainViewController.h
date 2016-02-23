@@ -33,7 +33,11 @@
 @property (strong,nonatomic) UIButton *digestbut;
 @property (strong,nonatomic) UITextField *numberField;
 
-
+@property (assign, nonatomic) NSString *sipName;
+@property (assign, nonatomic) NSString *sipPass;
+@property (assign, nonatomic) NSString *sipUri;
+@property (assign, nonatomic) NSString *sipTrans;
+@property (assign, nonatomic) NSString *sipInterNum;
 //@property (nonatomic, copy) NSString *phoneNumber;
 //@property (nonatomic, assign) NSInteger callId;
 

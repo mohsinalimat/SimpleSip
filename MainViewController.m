@@ -12,6 +12,10 @@
 #import "DialingCallViewController.h"
 #import "PhoneNumberFormatter.h"
 #import "AppDelegate.h"
+#import "NetworkActivityIndicatorManager.h"
+#import "DataHolder.h"
+
+#import "RestWebService.h"
 @interface MainViewController (){
     pjsua_call_id _call_id;
 }
@@ -101,9 +105,69 @@ DialingCallViewController *dialingcallviewcontroller;
     
     
     //        self.editableText = [[UITextField alloc]initWithFrame:CGRectMake(50,0,self.frame.size.width-50,self.frame.size.height)];
-    
+  //  [self getAuth]; Arcadyan fixes now
+    //[self getSIPInfo];
+    [self getSipAccount];
     [self initMainView];
+    
 }
+-(void)getSipAccount{
+    [[NetworkActivityIndicatorManager sharedManager] startActivity];
+
+    NSDictionary *dictr = [RestWebService getSIPInfo];
+    self.sipName = [dictr objectForKey:@"user"];
+    self.sipPass = [dictr objectForKey:@"password"];
+    self.sipUri = [dictr objectForKey:@"URI"];
+    self.sipTrans = [dictr objectForKey:@"transport"];
+    self.sipInterNum = [dictr objectForKey:@"internalNumber"];
+
+    NSLog(@"getSipInfo:%@\n%@\n%@\n%@\n%@\n%@\n",dictr,self.sipName,self.sipPass,self.sipUri,self.sipTrans,self.sipInterNum);
+}
+-(void)getAuth{
+    [[NetworkActivityIndicatorManager sharedManager] startActivity];
+    [RestWebService checkAuthWithCompletionHandler:^(BOOL success, NSDictionary *content, NSError *error) {
+        // IMPORTANT - Only update the UI on the main thread
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [[NetworkActivityIndicatorManager sharedManager] endActivity];
+            if (!success) {
+                NSLog(@"Couldn't getSystemMessage! %@ %@", error, [error localizedDescription]);
+                if ( [[error domain] isEqualToString:NSURLErrorDomain] ) {
+                    switch((StatusCode)[[content objectForKey:@"status"] intValue]){
+                        case Error_NoNetwork:{
+                            NSLog(@"Error_nonetwork");
+                            break;
+                        }
+                        default:{
+                            NSLog(@"defaultErr");
+                            break;
+                        }
+                    }
+                    
+                }
+            } else {
+                NSLog(@"getSystemMessage return %@",content);
+                switch((StatusCode)[[content objectForKey:@"status"] intValue]){
+                    case Success:{
+                        if([[content objectForKey:@"AUTH"] count]>0){
+                            NSLog(@"Succ:%@",[content objectForKey:@"AUTH"]);
+                        }
+                        break;
+                    }
+                    case Error_InternalError:{
+                        NSLog(@"InternalError %@",content);
+                        break;
+                    }
+                    default:{
+                        NSLog(@"%@",content);
+                        break;
+                    }
+                }
+            }
+        });
+    }];
+}
+
+
 - (void)initMainView{
     
     onebut = [UIButton buttonWithType:UIButtonTypeCustom];
