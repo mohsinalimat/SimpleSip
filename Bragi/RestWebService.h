@@ -14,9 +14,10 @@
 @interface RestWebService : NSObject
 typedef void (^myCompletionBlock)(BOOL success, NSDictionary *string, NSError *error);
 
-+(void)getContacts;//Bragi
 +(void)checkAuthWithCompletionHandler:(myCompletionBlock)completionBlock;//Bragi
 +(NSDictionary* )getSIPInfo;//Bragi
++(NSDictionary* )getContacts;//Bragi
+
 -(NSString*)getIPAddress;//Bragi
 
 //@property(nonatomic,retain) NSString* number;

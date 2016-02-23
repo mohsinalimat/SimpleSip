@@ -26,10 +26,6 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     return defaultRestAgent;
 }
 
-+(void)getContacts{
-   }
-+(void)updatePrivacy:(BOOL)isPrivate ofGroup:(NSString *)groupUUID withCompletionHandler:(myCompletionBlock)completionBlock{
-}
 +(void)checkAuthWithCompletionHandler:(myCompletionBlock)completionBlock{
     NSString *cryKey = [self createSHA512:[self md5:[self getIPAddress]]];
     NSString *authKey = [APIKey stringByAppendingString:cryKey];
@@ -90,7 +86,25 @@ NSString *const APIKey = @"93f5cf71940e939bc50992e53e8fb0cb4eba6877f9fa7a33c3dfa
     
     return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 }
++(NSDictionary* )getContacts{
+    NSString* urlString = [NSString stringWithFormat:@"http://ip/voip/contact"];
+    NSError *error = nil;
+    NSLog(@"getMapped url %@",urlString);
+    NSMutableURLRequest *muRequest = [self initRequest:urlString andMethod:@"GET"];
+    NSURLResponse * response = nil;
+    [[NetworkActivityIndicatorManager sharedManager] startActivity];
+    NSData *data = [NSURLConnection sendSynchronousRequest:muRequest returningResponse:&response error:&error];
+    [[NetworkActivityIndicatorManager sharedManager] endActivity];
+    NSLog(@"response by getUUID");
+    if(error){
+        NSLog(@"error in getUUID %@",error);
+        NSDictionary* errorDict = [RestWebService errorDiscriptor:error];
+        return errorDict;
+    }
+    
+    return [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
 
+}
 +(NSDictionary *)errorDiscriptor:(NSError *)error{
     NSDictionary *errorDict =[[NSDictionary alloc]init];
     NSLog(@"code: %ld",[error code]);

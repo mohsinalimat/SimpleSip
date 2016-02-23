@@ -8,7 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "ContactViewController.h"
-
+#import "RestWebService.h"
+#import "NetworkActivityIndicatorManager.h"
 @implementation ContactViewController
 
 - init{
@@ -18,6 +19,19 @@
     self.navigationItem.title = NSLocalizedString(@"Contact",nil);
 
     return self;
+}
+
+-(void)viewDidLoad{
+    NSLog(@"view");
+    [self getContact];
+}
+
+-(void)getContact{
+    [[NetworkActivityIndicatorManager sharedManager] startActivity];
+    
+    NSDictionary *dictr = [RestWebService getContacts];
+    NSLog(@"result:%@",dictr);
+
 }
 
 @end
